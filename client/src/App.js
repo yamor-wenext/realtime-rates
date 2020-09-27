@@ -19,10 +19,20 @@ function App() {
   const updateRate = (event) => {
     setIsLoading(false);
     console.log('Update from event listener ' + event.data);
-    const date = event.data.substr(event.data.indexOf(','),event.data.length).replace('"','').replace(']','').replace('"','').replace(',','').replace('T',' ').replace('Z',' UTC+0');
+    const date = event.data
+      .substr(event.data.indexOf(','), event.data.length)
+      .replace('"', '')
+      .replace(']', '')
+      .replace('"', '')
+      .replace(',', '')
+      .replace('T', ' ')
+      .replace('Z', ' UTC+0');
     setDate(date);
-    const rate = event.data.substr(0,event.data.indexOf(',')).replace('"','').replace('[','').
-    replace('"','');
+    const rate = event.data
+      .substr(0, event.data.indexOf(','))
+      .replace('"', '')
+      .replace('[', '')
+      .replace('"', '');
     setRate(rate);
     setIsDisplaying(true);
   };
@@ -44,9 +54,7 @@ function App() {
     prevCurrency = currency;
     prevFiat = fiat;
   };
-  /* useEffect(() => {
-    fetchData();
-  }, [input]); */
+  
   return (
     <div className="App">
       <header className="App-header">
