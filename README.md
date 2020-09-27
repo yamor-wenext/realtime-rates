@@ -1,2 +1,4 @@
 # realtime-rates
-Getting realtime cryptocurrency rates using Server-Sent Events
+Experimenting with Server-Sent Events by building a 'realtime' cryptocurrency rates app
+
+## Still a WIP.
